@@ -1,19 +1,18 @@
 import { useState } from 'react'
 import { createUserWithEmailAndPassword} from "firebase/auth";
-import {auth} from './firebase-config'
+import {auth} from '../firebase-config'
 
 // firstname, lastname, username, email, password, confirm password
 const SignUp = ({ onAdd }) => {
 
   const register = async () => {
     try {
-      const user = await createUserWithEmailAndUsernameAndPassword(
+      const user = await createUserWithEmailAndPassword(
         auth,
-        userName,
         email,
         password
       )
-      console.log(user)
+      console.log(email)
     } catch (error) {
       console.log(error.message);
     }

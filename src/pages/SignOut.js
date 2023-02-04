@@ -1,12 +1,12 @@
 import React from 'react'
 import {auth} from './firebase-config'
-
+import { signOut} from "firebase/auth"
 const SignOut = () => {
     const logout = async () => {
-
+        await signOut(auth)
     }
     return (
-        <div>SignOut</div>
+        <button onClick = {logout}>Sign Out</button>
     )
 }
 
