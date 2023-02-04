@@ -10,6 +10,7 @@ const NavBar = () => {
        <CustomLink to ="/Posting">Post</CustomLink>
        <CustomLink to = "/signIn">Sign In</CustomLink>
        <CustomLink to = "/signUp">Sign Up</CustomLink>
+       <CustomLink to = "/signOut">Sign Out</CustomLink>
       </ul>
     </nav>
   )
