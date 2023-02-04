@@ -1,7 +1,4 @@
 import { useState } from "react"
-//import { FileUploader } from "react-drag-drop-files"
-
-const fileTypes = ["JPG", "PNG", "GIF"]
 
 const AddPost = ({ onAdd }) => {
   const [start, setStart] = useState("")
@@ -58,7 +55,7 @@ const AddPost = ({ onAdd }) => {
       </div>
       <div>
         <label>Upload an Image</label>
-        <input type="file" name="image" value={image} placeholder="Choose File" onChange={(e) => setImage(e.target.value)}/>
+        <input type="file" name="image" value={image} placeholder="Choose File" onChange={handleChange}/>
       </div>
       <div>
         <label>Date</label>
