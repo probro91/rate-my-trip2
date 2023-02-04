@@ -58,7 +58,7 @@ const AddPost = ({ onAdd }) => {
       </div>
       <div>
         <label>Upload an Image</label>
-        <FileUploader handleChange={handleChange} name="image" types={fileTypes} />
+        {/*<FileUploader handleChange={handleChange} name="image" types={fileTypes} />*/}
       </div>
       <div>
         <label>Date</label>
