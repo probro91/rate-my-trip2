@@ -1,12 +1,11 @@
-import React from 'react'
-import "../App.scss";
+import Post from "../components/Post"
 
 
 const Home = () => {
   return (
     
     <div>
-      
+      <Post />
     </div>
   )
 }
