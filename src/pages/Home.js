@@ -1,5 +1,6 @@
-import React from 'react'
-import "../App.scss";
+import ImageSlider from "../components/ImageSlider"
+import { SliderData } from '../components/SliderData'
+import Post from "../components/Post"
 
 
 const Home = () => {
@@ -7,7 +8,13 @@ const Home = () => {
     
     <div>
       
+      <h1>hello</h1>
+
+      <ImageSlider slides={SliderData}/>
+
     </div>
+      
+    
   )
 }
 
