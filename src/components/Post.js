@@ -13,16 +13,16 @@ var postsBar = {
   color: 'black',
 }
 
-var post = {
+var postStyle = {
   display: 'flex',  
   fontSize: '13px',
   width: '50%',
 }
 const Post = ({ post,childern }) => {
   return (
-    <div style={post}>
+    <div style={postStyle}>
       <h3>Trip: {post.start} to {post.end}</h3>
-      <img src={post.image} alt="Trip Picture" width="100" height="100"></img>
+      <img src={post.image} width="100" height="100"></img>
       <p>
         Date: {post.date}
         Description: {post.description}
