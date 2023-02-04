@@ -1,6 +1,6 @@
 import React from 'react'
-//import "../App.scss";
-//import Slider from "../Components/Slider/slider";
+import "../App.scss";
+import Slider from "../components/slider/Slider";
 
 const Home = () => {
   return (
