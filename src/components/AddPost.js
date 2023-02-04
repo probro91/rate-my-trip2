@@ -34,7 +34,7 @@ const AddPost = ({ onAdd }) => {
       return
     }
 
-    onAdd({ start, end, image, date, description})
+    onAdd({ start, end, image, date, description })
 
     setStart("")
     setEnd("")
