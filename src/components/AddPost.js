@@ -58,7 +58,7 @@ const AddPost = ({ onAdd }) => {
       </div>
       <div>
         <label>Upload an Image</label>
-        {/*<FileUploader handleChange={handleChange} name="image" types={fileTypes} />*/}
+        <input type="file" name="image" value={image} placeholder="Choose File" onChange={(e) => setImage(e.target.value)}/>
       </div>
       <div>
         <label>Date</label>
