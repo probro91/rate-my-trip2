@@ -14,7 +14,7 @@ const SignUp = ({ onAdd }) => {
       )
       console.log(email)
     } catch (error) {
-      alerterror.message);
+      alert(error.message);
     }
 
 
