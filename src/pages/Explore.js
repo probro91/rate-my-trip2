@@ -10,7 +10,18 @@ const Explore = () => {
   useEffect(() => {
     const getPosts = async () => {
       const data = await getDocs(usersCollectionRef)
-      setTrips(data.docs.map((doc) => ({...doc.data, id: doc.id})))
+      let arr = [];
+      data.forEach((res) => {
+        if (res.data() != null) {
+          arr.push({
+            description: res.data().description,
+            date: res.data().date,
+            destination : res.data().destination,
+            from: res.data().from
+          })
+        }
+      })
+      setTrips(arr)
     }
 
     getPosts()

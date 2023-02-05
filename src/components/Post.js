@@ -1,22 +1,19 @@
 //post: start, end, image, date, description
-var postsBar = {
-  backgroundColor: "white",
-  borderTop: "1px solid #E7E7E7",
-  textAlign: "left",
-  padding: "20px",
-  position: "fixed",
-  left: "0",
-  bottom: "0",
-  height: "200px",
-  width: "90%",
-  overflowY:'scroll',
-  color: 'black',
-}
+
 
 var postStyle = {
   display: 'flex',  
   fontSize: '13px',
-  width: '50%',
+  width: '100%',
+  backgroundColor: "white",
+  borderTop: "1px solid #E7E7E7",
+  textAlign: "left",
+  padding: "20px",
+  position: "relative",
+  height: "15vh",
+  width: "90%",
+  overflowY:'scroll',
+  color: 'black',
 }
 const Post = ({trip}) => {
   console.log(trip.description)
