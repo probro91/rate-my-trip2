@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+
+
 const AddPost = ({ onAdd }) => {
   const [start, setStart] = useState("")
   const [end, setEnd] = useState("")
@@ -36,11 +38,11 @@ const AddPost = ({ onAdd }) => {
 
     onAdd({ start, end, image, date, description })
 
-    setStart("")
-    setEnd("")
-    setImage("")
-    setDate("")
-    setDescription("")
+    setStart('')
+    setEnd('')
+    setImage('')
+    setDate('')
+    setDescription('')
   }
 
   return (
