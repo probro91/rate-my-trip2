@@ -1,27 +1,16 @@
+import './Post.css'
 //post: start, end, image, date, description
 
 
-var postStyle = {
-  display: 'flex',  
-  fontSize: '13px',
-  width: '100%',
-  backgroundColor: "white",
-  borderTop: "1px solid #E7E7E7",
-  textAlign: "left",
-  padding: "20px",
-  position: "relative",
-  height: "15vh",
-  width: "90%",
-  overflowY:'scroll',
-  color: 'black',
-}
+
 const Post = ({trip}) => {
-  console.log(trip.description)
   return (
-    <div style={postStyle}>
+    <div className = "post">
       <h3>Trip: {trip.from} to {trip.destination}</h3>
-      <p>
+      <p className = "date">
         Date: {trip.date}
+      </p>
+      <p className = "descrip">
         Description: {trip.description}
       </p>
     </div>
