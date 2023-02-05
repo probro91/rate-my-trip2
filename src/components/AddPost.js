@@ -48,21 +48,15 @@ const AddPost = () => {
         <div className="txt_field"> 
         <input type="text" placeholder="Where did your trip start?" value={start} onChange={(e) => setStart(e.target.value)}/>
       </div>
-
       <div className="txt_field">  
         <input type="text" placeholder="Where did your trip end?" value={end} onChange={(e) => setEnd(e.target.value)}/>
       </div>
-
-      
-
       <div className="txt_field">  
         <input type="text" placeholder="When did you go on your trip?" value={date} onChange={(e) => setDate(e.target.value)}/>
       </div>
-
       <div className="txt_field">  
         <input type="text" placeholder="Please provide a short description of your trip" value={description} onChange={(e) => setDescription(e.target.value)}/>
       </div>
-
       <div>
         <label>Upload an Image</label>
         <input type="file" onChange={(e) => setImage(e.target.files[0])}/>
