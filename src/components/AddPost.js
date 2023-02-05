@@ -1,6 +1,5 @@
+
 import { useState } from "react"
-
-
 
 const AddPost = ({ onAdd }) => {
   const [start, setStart] = useState("")
