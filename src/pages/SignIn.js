@@ -43,12 +43,10 @@ const SignIn = () => {
     <div className="center">
     <form  onSubmit={onSubmit}>
       <div className="txt_field">
-        <label>Email</label>
-        <input type="text" placeholder="Email" value={email} onChange={(e) => setLoginEmail(e.target.value)}/>
+        <input type="username" placeholder="username" value={email} onChange={(e) => setLoginEmail(e.target.value)}/>
       </div>
       <div className="txt_field">
-        <label>Password</label>
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setLoginPassword(e.target.value)}/>
+        <input type="password" placeholder="password" value={password} onChange={(e) => setLoginPassword(e.target.value)}/>
       </div>
       <input type = "submit" value = "submit"/>
     </form>
