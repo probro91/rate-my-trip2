@@ -1,6 +1,5 @@
 var style = {
-  backgroundColor: "black",
-  borderTop: "1px solid #E7E7E7",
+  backgroundColor: "#4B6F44",
   textAlign: "center",
   padding: "20px",
   position: "fixed",
@@ -20,10 +19,12 @@ width: '100%',
 function Footer({ children }) {
   return (
       <div>
-          <div style={phantom} />
+          <div style={phantom}/>
           <div style={style}>
+            
               { children }
           </div>
+         
       </div>
   )
 }

@@ -6,6 +6,7 @@
 
 body {
   margin: 0;
+  background-color: #659DBD;
 }
 
 .container {
@@ -15,9 +16,9 @@ body {
 }
 
 .nav {
-  background-color: darkslategrey;
+  background-color: #4B6F44;
   font-family: 'Manrope', sans-serif ;
-  color: wheat;
+  color: #FBEEC1;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -43,15 +44,15 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .6rem
+  padding: 0.6rem;
 }
 
 .nav li.active {
-  background-color: #204b57;
+  background-color: #7da974;
 }
 
 .nav li:hover {
-  background-color: #204B57;
+  background-color: #588150;
 }
 
 .slider {
@@ -65,9 +66,10 @@ body {
   
   .image {
    display: flex;
+   margin-top: 3rem;
    margin-left: auto;
    margin-right: auto;
-   width: 50%;
+   width: 90%;
    position: center;
    max-width: 60%;
    max-height: 50%;
@@ -86,7 +88,7 @@ body {
    user-select: none;
    right: 32px;
    font-size: 3rem;
-   color: darkslategrey;
+   color: #FCEBEA;
    
    }
   
@@ -99,7 +101,7 @@ body {
    top: 48%;
    left: 32px;
    font-size: 3rem;
-   color: darkslategrey;
+   color: #FCEBEA;
   
   
    }
@@ -116,4 +118,5 @@ body {
    transition-duration: 1s;
    transform: scale(1.08);
   }
+  
   
