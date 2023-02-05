@@ -1,5 +1,6 @@
-
 import { useState } from "react"
+import "./form.css"
+
 
 const AddPost = ({ onAdd }) => {
   const [start, setStart] = useState("")
@@ -48,9 +49,10 @@ const AddPost = ({ onAdd }) => {
     <form className="add-form" onSubmit={onSubmit}>
       <div>
         <label>Start Location</label>
+        <div className="txt_field"> 
         <input type="text" placeholder="Where did your trip start?" value={start} onChange={(e) => setStart(e.target.value)}/>
       </div>
-      <div>
+      <div className="txt_field">
         <label>End Location</label>
         <input type="text" placeholder="Where did your trip end?" value={end} onChange={(e) => setEnd(e.target.value)}/>
       </div>
@@ -58,11 +60,11 @@ const AddPost = ({ onAdd }) => {
         <label>Upload an Image</label>
         <input type="file" name="image" value={image} placeholder="Choose File" onChange={handleChange}/>
       </div>
-      <div>
+      <div className="txt_field">
         <label>Date</label>
         <input type="text" placeholder="When did you go on your trip?" value={date} onChange={(e) => setDate(e.target.value)}/>
       </div>
-      <div>
+      <div className="txt_field">
         <label>Description</label>
         <input type="text" placeholder="Please provide a short description of your trip" value={description} onChange={(e) => setDescription(e.target.value)}/>
       </div>
