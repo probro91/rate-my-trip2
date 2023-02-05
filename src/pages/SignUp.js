@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { createUserWithEmailAndPassword} from "firebase/auth";
 import {auth} from '../firebase-config'
+import '../components/form.css'
 
 // firstname, lastname, username, email, password, confirm password
 const SignUp = ({ onAdd }) => {
@@ -54,26 +55,27 @@ const SignUp = ({ onAdd }) => {
   }
   
   return (
-    <form className="add-form" onSubmit={onSubmit}>
-      <div>
-        <label>Username</label>
+    <div className="center">
+    <form onSubmit={onSubmit}>
+      <div className="txt_text">
         <input type="text" placeholder="Username" value={userName} onChange={(e) => setUserName(e.target.value)}/>
       </div>
-      <div>
-        <label>Email</label>
+
+      <div className="txt_text">  
         <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
       </div>
-      <div>
-        <label>Password</label>
+
+      <div className="txt_text">        
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
       </div>
-      <div>
-        <label>confirmPassword</label>
+
+      <div className="txt_text">
         <input type="password" placeholder="Confirm password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
       </div>
 
       <input type = "submit" value = "submit"/>
     </form>
+    </div>
   )
 }
 
