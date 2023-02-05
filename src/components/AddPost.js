@@ -58,9 +58,24 @@ const AddPost = () => {
         <input type="text" placeholder="Please provide a short description of your trip" value={description} onChange={(e) => setDescription(e.target.value)}/>
       </div>
       <div>
-        <label>Upload an Image</label>
-        <input type="file" onChange={(e) => setImage(e.target.files[0])}/>
-      </div>
+      {image && (
+        <div>
+        <img alt="not fount" width={"250px"} src={URL.createObjectURL(image)} />
+        <br />
+        <button onClick={()=>setImage(null)}>Remove</button>
+        </div>
+      )}
+      <br />
+     
+      <br /> 
+      <input
+        type="file"
+        name="myImage"
+        onChange={(event) => {
+          setImage(event.target.files[0]);
+        }}
+      />
+    </div>
       <input type="submit" value="submit"/> 
     </form>
     </div>
