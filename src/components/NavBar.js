@@ -1,18 +1,22 @@
 import PropTypes from "prop-types"
-
 import {Link, useMatch, useResolvedPath} from "react-router-dom"
+import {onAuthStateChanged, getAuth} from "firebase/auth"
+
 const NavBar = () => {
+  const auth = getAuth()
+  let user = auth.onAuthStateChanged;
+
   return (
     <nav className = "nav">
       <Link to = "/" className = "site_title"> RateMyTrip</Link>
       <ul>
        <CustomLink to = "/explore">Explore</CustomLink>
-       <CustomLink to ="/Posting">Post</CustomLink>
-       <CustomLink to = "/signIn">Sign In</CustomLink>
-       <CustomLink to = "/signUp">Sign Up</CustomLink>
-       <CustomLink to = "/signOut">Sign Out</CustomLink>
+       {user && <CustomLink to ="/Posting">Post</CustomLink>}
+       {!user && <CustomLink to = "/signIn">Sign In</CustomLink>}
+       {!user &&<CustomLink to = "/signUp">Sign Up</CustomLink>}
+       {user &&<CustomLink to = "/signOut">Sign Out</CustomLink>}
       </ul>
-    </nav>
+    </nav> 
   )
 }
 
