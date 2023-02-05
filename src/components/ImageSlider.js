@@ -27,8 +27,8 @@ if(!Array.isArray(slides) || slides.length <= 0) {
 }
  return (
    <section className="slider">
-       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+       <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} style={{color:"#4B6F44"}}/>
+       <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} style={{color:"#4B6F44"}}/>
    {SliderData.map((slide, index) => {
 
 
