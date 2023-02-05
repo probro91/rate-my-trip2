@@ -34,7 +34,7 @@ body {
   margin: 0;
   list-style: none;
   display: flex;
-  gap: 1rem
+  gap: 1rem;
 }
 
 .nav a{
@@ -54,3 +54,62 @@ body {
   background-color: #204B57;
 }
 
+.slider {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  
+  .image {
+   display: flex;
+   max-width: 100%;
+   height: auto;
+   border-radius: 10px;
+   }
+  
+  
+  .right-arrow {
+   display: flex;
+   position: absolute;
+   top: 50%;
+   cursor: pointer;
+   z-index: 10;
+   user-select: none;
+   position: absolute;
+   top: 50%;
+   right: 32px;
+   font-size: 3rem;
+   color: black;
+   
+   }
+  
+  
+  .left-arrow {
+   cursor: pointer;
+   z-index: 10;
+   user-select: none;
+   position: absolute;
+   top: 50%;
+   left: 32px;
+   font-size: 3rem;
+   color: black;
+  
+  
+   }
+  
+  
+  .slide {
+   opacity: 0;
+   transition-duration: 1s ease;
+  }
+  
+  
+  .slide.active {
+   opacity: 1;
+   transition-duration: 1s;
+   transform: scale(1.08);
+  }
+  
