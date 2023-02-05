@@ -8,6 +8,7 @@ import SignUp from "./pages/SignUp"
 import Home from "./pages/Home"
 import {Route, Routes} from "react-router-dom"
 import Footer from "./components/Footer"
+import Search from "./pages/Search"
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path = "/Posting" element = {<Posting />} />
             <Route path = "/signUp" element = {<SignUp />} />
             <Route path = "/signIn" element = {<SignIn />} />
+            <Route path = "/search" element = {<Search />} />
 
           </Routes>
 

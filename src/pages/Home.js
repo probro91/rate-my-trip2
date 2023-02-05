@@ -1,12 +1,13 @@
 import ImageSlider from "../components/ImageSlider"
 import { SliderData } from '../components/SliderData'
 import {useState} from "react"
-import { Route, Routes } from "react-router-dom"
-import Search from "./Search"
+import { useNavigate } from "react-router-dom"
 
 
 const Home = () => {
   const [search, setSearch] = useState("")
+
+  const navigate = useNavigate()
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -17,6 +18,7 @@ const Home = () => {
     }
 
     setSearch('')
+    navigate("/search", {search})
   }
   return (
     <div>
@@ -27,11 +29,6 @@ const Home = () => {
         <input type="submit" value="submit"/>
       </form>
       <ImageSlider slides={SliderData}/>
-      {search == "" ? "" : 
-        <Routes>
-          <Route path = "/search" element = {<Search search={search}/>} />
-        </Routes>
-      }
     </div>
   )
 }

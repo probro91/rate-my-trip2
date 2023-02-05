@@ -7,12 +7,14 @@ const Search = ({ search }) => {
   const [trips, setTrips] = useState([])
   const usersCollectionRef = collection(db, "trips")
 
+  //setTrips(query(usersCollectionRef, where("from", "==", search)))
+
   useEffect(() => {
     const getPosts = async () => {
       const data = await getDocs(usersCollectionRef)
       let arr = [];
       data.forEach((res) => {
-        if (res.data().from == search) {
+        if (res.data().from === search) {
           arr.push({
             description: res.data().description,
             date: res.data().date,
@@ -25,7 +27,7 @@ const Search = ({ search }) => {
     }
 
     getPosts()
-  })
+  }, [search, usersCollectionRef]);
   return (
     <div>
       {trips.length > 0 ?(
