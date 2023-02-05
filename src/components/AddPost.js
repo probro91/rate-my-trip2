@@ -1,15 +1,12 @@
 
 import { useState } from "react"
 
-const AddPost = ({ onAdd }) => {
+const AddPost = () => {
   const [start, setStart] = useState("")
   const [end, setEnd] = useState("")
   const [image, setImage] = useState(null)
   const [date, setDate] = useState("")
   const [description, setDescription] = useState("")
-  const handleChange = (image) => {
-    setImage(image);
-  }
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -35,11 +32,11 @@ const AddPost = ({ onAdd }) => {
       return
     }
 
-    onAdd({ start, end, image, date, description })
+    //onAdd({ start, end, image, date, description })
 
     setStart('')
     setEnd('')
-    setImage('')
+    setImage(null)
     setDate('')
     setDescription('')
   }
@@ -56,7 +53,7 @@ const AddPost = ({ onAdd }) => {
       </div>
       <div>
         <label>Upload an Image</label>
-        <input type="file" name="image" value={image} placeholder="Choose File" onChange={handleChange}/>
+        <input type="file" onChange={(e) => setImage(e.target.files[0])}/>
       </div>
       <div>
         <label>Date</label>

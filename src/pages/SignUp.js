@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { createUserWithEmailAndPassword} from "firebase/auth";
 import {auth} from '../firebase-config'
-import '../components/form.css'
 
 // firstname, lastname, username, email, password, confirm password
 const SignUp = ({ onAdd }) => {
@@ -41,7 +40,7 @@ const SignUp = ({ onAdd }) => {
       alert("Please add a password")
       return
     }
-    if(password != confirmPassword) {
+    if(password !== confirmPassword) {
       alert("Passwords do not match")
       return
     }
@@ -55,27 +54,26 @@ const SignUp = ({ onAdd }) => {
   }
   
   return (
-    <div className="center">
-    <form onSubmit={onSubmit}>
-      <div className="txt_text">
+    <form className="add-form" onSubmit={onSubmit}>
+      <div>
+        <label>Username</label>
         <input type="text" placeholder="Username" value={userName} onChange={(e) => setUserName(e.target.value)}/>
       </div>
-
-      <div className="txt_text">  
+      <div>
+        <label>Email</label>
         <input type="text" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
       </div>
-
-      <div className="txt_text">        
+      <div>
+        <label>Password</label>
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
       </div>
-
-      <div className="txt_text">
+      <div>
+        <label>confirmPassword</label>
         <input type="password" placeholder="Confirm password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
       </div>
 
       <input type = "submit" value = "submit"/>
     </form>
-    </div>
   )
 }
 
