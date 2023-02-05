@@ -2,6 +2,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import React from 'react'
 import { useState } from 'react'
 import {auth} from '../firebase-config'
+import '../components/form.css'
 
 const SignIn = () => {
   
@@ -39,17 +40,19 @@ const SignIn = () => {
   }
   
   return (
-    <form className="add-form" onSubmit={onSubmit}>
-      <div>
+    <div className="center">
+    <form  onSubmit={onSubmit}>
+      <div className="txt_field">
         <label>Email</label>
         <input type="text" placeholder="Email" value={email} onChange={(e) => setLoginEmail(e.target.value)}/>
       </div>
-      <div>
+      <div className="txt_field">
         <label>Password</label>
         <input type="password" placeholder="Password" value={password} onChange={(e) => setLoginPassword(e.target.value)}/>
       </div>
       <input type = "submit" value = "submit"/>
     </form>
+    </div>
   )
 }
 
