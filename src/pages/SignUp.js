@@ -14,7 +14,7 @@ const SignUp = ({ onAdd }) => {
       )
       console.log(email)
     } catch (error) {
-      console.log(error.message);
+      alerterror.message);
     }
 
 
@@ -47,12 +47,10 @@ const SignUp = ({ onAdd }) => {
     
     register()
     
-    onAdd({ userName, email, password })
-
-    setUserName("")
-    setEmail("")
-    setPassword("")
-    setConfirmPassword("")
+    setUserName('')
+    setEmail('')
+    setPassword('')
+    setConfirmPassword('')
   }
   
   return (

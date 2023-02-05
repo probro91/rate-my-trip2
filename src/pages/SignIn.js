@@ -17,16 +17,39 @@ const SignIn = () => {
       )
       console.log(email)
     } catch (error) {
-      console.log(error.message);
+      alert(error.message);
     }
   }
+  const onSubmit = (e) => {
+    e.preventDefault()
+    
+    if(!email) {
+      alert("Please add a email")
+      return
+    }
+    if(!password) {
+      alert("Please add a password")
+      return
+    }
+    
+    login()
+    
+    setLoginEmail('')
+    setLoginPassword('')
+  }
+  
   return (
-    <div classname = "signIn">
-      <h3>Sign In</h3>
-      <input placeholder = "Email" value={email} onChange={(e) => setLoginEmail(e.target.value)}/>
-      <input placeholder = "Password" value={password} onChange={(e) => setLoginPassword(e.target.value)}/>
-      <button onClick = {login}>Login</button>
-    </div>
+    <form className="add-form" onSubmit={onSubmit}>
+      <div>
+        <label>Email</label>
+        <input type="text" placeholder="Email" value={email} onChange={(e) => setLoginEmail(e.target.value)}/>
+      </div>
+      <div>
+        <label>Password</label>
+        <input type="password" placeholder="Password" value={password} onChange={(e) => setLoginPassword(e.target.value)}/>
+      </div>
+      <input type = "submit" value = "submit"/>
+    </form>
   )
 }
 
