@@ -2,6 +2,7 @@ import { useState } from "react"
 import "./form.css"
 import {addDoc, collection} from "firebase/firestore"
 import { db } from "../firebase-config"
+import { useNavigate } from "react-router-dom"
 
 const AddPost = () => {
   const [start, setStart] = useState("")
@@ -10,6 +11,8 @@ const AddPost = () => {
   const [date, setDate] = useState("")
   const [description, setDescription] = useState("")
   const usersCollectionRef = collection(db, "trips")
+
+  const navigate = useNavigate()
 
   const createTrip = async () => {
     await addDoc(usersCollectionRef, {from: start, destination: end, date: date, description: description});
@@ -49,6 +52,7 @@ const AddPost = () => {
     //setImage(null)
     setDate('')
     setDescription('')
+    navigate("/")
   }
 
   return (
