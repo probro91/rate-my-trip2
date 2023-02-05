@@ -1,11 +1,11 @@
 import { useState } from "react"
-import { FileUploader } from "react-drag-drop-files"
+//import { FileUploader } from "react-drag-drop-files"
 
 const fileTypes = ["JPG", "PNG", "GIF"]
 
 const AddPost = ({ onAdd }) => {
   const [start, setStart] = useState("")
-  const [end, setend] = useState("")
+  const [end, setEnd] = useState("")
   const [image, setImage] = useState(null)
   const [date, setDate] = useState("")
   const [description, setDescription] = useState("")
@@ -40,7 +40,7 @@ const AddPost = ({ onAdd }) => {
     onAdd({ start, end, image, date, description})
 
     setStart("")
-    setend("")
+    setEnd("")
     setImage("")
     setDate("")
     setDescription("")

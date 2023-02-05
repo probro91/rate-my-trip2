@@ -1,4 +1,5 @@
-import AddPost from "../../client/src/Components/AddPost"
+import AddPost from "../components/AddPost"
+import { useState } from "react"
 
 const Posting = () => {
   const [posts, setPosts] = useState([
