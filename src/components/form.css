@@ -28,6 +28,16 @@ body{
   -o-background-size: cover;
   background-size: cover;
 }
+.CHS {
+  width: 100%;
+  height: 500px;
+  background-image: url("http://www.apartments.com/images/default-source/2019-naa/charleston-scfa49d136-0995-4e76-a165-903d7f7ba60f.tmb-featuredim.jpg?sfvrsn=405e7e84_1");
+        background-repeat: no-repeat, repeat;
+        background-color: #FBEEC1;
+        background-size: cover;
+        background-size: cover;
+        background-size: cover;
+} 
 .center{
   /**
   Center of Sign In
