@@ -1,11 +1,37 @@
 import ImageSlider from "../components/ImageSlider"
 import { SliderData } from '../components/SliderData'
-import Post from "../components/Post"
-import {useState} from "react"
+import {useState, useEffect} from "react"
+import { db } from "../firebase-config"
+import {getDocs, collection} from "firebase/firestore"
+import { useNavigate } from "react-router-dom"
 
 
 const Home = () => {
   const [search, setSearch] = useState("")
+  const [trips, setTrips] = useState([])
+  const usersCollectionRef = collection(db, "trips")
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const getPosts = async () => {
+      const data = await getDocs(usersCollectionRef)
+      let arr = [];
+      data.forEach((res) => {
+        if (res.data().from == search) {
+          arr.push({
+            description: res.data().description,
+            date: res.data().date,
+            destination : res.data().destination,
+            from: res.data().from
+          })
+        }
+      })
+      setTrips(arr)
+    }
+
+    getPosts()
+  })
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -16,6 +42,7 @@ const Home = () => {
     }
 
     setSearch('')
+    navigate("/Search")
   }
   return (
     <div>
