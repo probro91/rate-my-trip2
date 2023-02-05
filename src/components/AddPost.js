@@ -67,7 +67,6 @@ const AddPost = () => {
         <label>Upload an Image</label>
         <input type="file" onChange={(e) => setImage(e.target.files[0])}/>
       </div>
-    <br></br>
       <input type="submit" value="submit"/> 
     </form>
     </div>
