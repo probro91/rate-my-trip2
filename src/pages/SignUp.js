@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { createUserWithEmailAndPassword} from "firebase/auth";
 import {auth} from '../firebase-config'
+import { useNavigate } from 'react-router-dom';
 
 // firstname, lastname, username, email, password, confirm password
 const SignUp = ({ onAdd }) => {
@@ -24,6 +25,8 @@ const SignUp = ({ onAdd }) => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
+
+  const navigate = useNavigate()
 
   const onSubmit = (e) => {
     e.preventDefault()
@@ -51,6 +54,7 @@ const SignUp = ({ onAdd }) => {
     setEmail('')
     setPassword('')
     setConfirmPassword('')
+    navigate("/")
   }
   
   return (
