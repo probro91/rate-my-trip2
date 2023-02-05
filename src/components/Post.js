@@ -18,14 +18,14 @@ var postStyle = {
   fontSize: '13px',
   width: '50%',
 }
-const Post = ({ post,childern }) => {
+const Post = ({trip}) => {
+  console.log(trip.description)
   return (
     <div style={postStyle}>
-      <h3>Trip: {post.start} to {post.end}</h3>
-      <img src={post.image} width="100" height="100"></img>
+      <h3>Trip: {trip.from} to {trip.destination}</h3>
       <p>
-        Date: {post.date}
-        Description: {post.description}
+        Date: {trip.date}
+        Description: {trip.description}
       </p>
     </div>
   )
