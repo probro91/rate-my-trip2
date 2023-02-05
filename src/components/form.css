@@ -12,16 +12,21 @@ body{
   height: 100vh;
 
   overflow: hidden;
-  background-image: url("http://www.apartments.com/images/default-source/2019-naa/charleston-scfa49d136-0995-4e76-a165-903d7f7ba60f.tmb-featuredim.jpg?sfvrsn=405e7e84_1");
   background-repeat: no-repeat, repeat;
   background-color: #FBEEC1;
   background-size: cover;
   background-size: cover;
   background-size: cover;
-  
-  
-  
-  
+}
+
+.signPage div{
+  /*background-image: url("http://www.apartments.com/images/default-source/2019-naa/charleston-scfa49d136-0995-4e76-a165-903d7f7ba60f.tmb-featuredim.jpg?sfvrsn=405e7e84_1");
+  background-repeat: no-repeat;*/
+  background: url("http://www.apartments.com/images/default-source/2019-naa/charleston-scfa49d136-0995-4e76-a165-903d7f7ba60f.tmb-featuredim.jpg?sfvrsn=405e7e84_1") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .center{
   /**

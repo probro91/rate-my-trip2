@@ -58,6 +58,7 @@ const SignUp = ({ onAdd }) => {
   }
   
   return (
+    <div>
     <div className="center">
       <h1>
         <strong> Sign Up</strong>
@@ -78,6 +79,7 @@ const SignUp = ({ onAdd }) => {
 
       <input type = "submit" value = "SIGN UP"/>
     </form>
+    </div>
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Explore = () => {
   return (
-    <div>
+    <div className='signPage'>
         Explore
     </div>
   )
