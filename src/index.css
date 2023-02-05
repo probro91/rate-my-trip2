@@ -47,11 +47,11 @@ body {
 }
 
 .nav li.active {
-  background-color: #578989;
+  background-color: #204b57;
 }
 
 .nav li:hover {
-  background-color: #679999;
+  background-color: #204B57;
 }
 
 .slider {
@@ -63,9 +63,11 @@ align-items: center;
 }
 
 .image {
+  display: flex;
   width: 1000px;
   height: 600px;
   border-radius: 10px;
+  
 }
 
 .right-arrow {
@@ -76,7 +78,7 @@ align-items: center;
   top: 50%;
   right: 32px;
   font-size: 3rem;
-  color: #679999
+  color: black;
   
 }
 
@@ -88,7 +90,7 @@ align-items: center;
   top: 50%;
   left: 32px;
   font-size: 3rem;
-  color: #679999
+  color: black;
 
   
 }
