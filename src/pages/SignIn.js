@@ -43,20 +43,21 @@ const SignIn = () => {
   }
   
   return (
-  
-    <div className="center">
-      <h1>
-        <strong> Sign In</strong>
-      </h1>
-    <form  onSubmit={onSubmit}>
-      <div className="txt_field">
-        <input type="username" placeholder="username" value={email} onChange={(e) => setLoginEmail(e.target.value)}/>
+    <div>
+      <div className="center">
+        <h1>
+          <strong>Sign In</strong>
+        </h1>
+      <form  onSubmit={onSubmit}>
+        <div className="txt_field">
+          <input type="username" placeholder="Email" value={email} onChange={(e) => setLoginEmail(e.target.value)}/>
+        </div>
+        <div className="txt_field">
+          <input type="password" placeholder="Password" value={password} onChange={(e) => setLoginPassword(e.target.value)}/>
+        </div>
+        <input type = "Submit" value = "LOG IN"/>
+      </form>
       </div>
-      <div className="txt_field">
-        <input type="password" placeholder="password" value={password} onChange={(e) => setLoginPassword(e.target.value)}/>
-      </div>
-      <input type = "Submit" value = "LOG IN"/>
-    </form>
     </div>
   )
 }
