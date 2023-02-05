@@ -43,7 +43,11 @@ const SignIn = () => {
   }
   
   return (
+  
     <div className="center">
+      <h1>
+        <strong> Sign In</strong>
+      </h1>
     <form  onSubmit={onSubmit}>
       <div className="txt_field">
         <input type="username" placeholder="username" value={email} onChange={(e) => setLoginEmail(e.target.value)}/>
@@ -51,7 +55,7 @@ const SignIn = () => {
       <div className="txt_field">
         <input type="password" placeholder="password" value={password} onChange={(e) => setLoginPassword(e.target.value)}/>
       </div>
-      <input type = "submit" value = "submit"/>
+      <input type = "Submit" value = "LOG IN"/>
     </form>
     </div>
   )

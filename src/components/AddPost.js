@@ -52,7 +52,7 @@ const AddPost = () => {
         <input type="text" placeholder="Where did your trip end?" value={end} onChange={(e) => setEnd(e.target.value)}/>
       </div>
       <div className="txt_field">  
-        <input type="text" placeholder="When did you go on your trip?" value={date} onChange={(e) => setDate(e.target.value)}/>
+        <input type="text" placeholder="When did you go on your trip? (MM/DD/YYYY)" value={date} onChange={(e) => setDate(e.target.value)}/>
       </div>
       <div className="txt_field">  
         <input type="text" placeholder="Please provide a short description of your trip" value={description} onChange={(e) => setDescription(e.target.value)}/>
