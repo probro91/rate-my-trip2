@@ -54,7 +54,11 @@ const SignUp = ({ onAdd }) => {
   }
   
   return (
-    <form className="center" onSubmit={onSubmit} >
+    <div className="center">
+      <h1>
+        <strong> Sign Up</strong>
+      </h1>
+     <form onSubmit={onSubmit} >
       <div className='txt_field'>
         <input type="text" placeholder="Username" value={userName} onChange={(e) => setUserName(e.target.value)}/>
       </div>
@@ -68,8 +72,9 @@ const SignUp = ({ onAdd }) => {
         <input type="password" placeholder="Confirm password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
       </div>
 
-      <input type = "submit" value = "submit"/>
+      <input type = "submit" value = "SIGN UP"/>
     </form>
+    </div>
   )
 }
 
