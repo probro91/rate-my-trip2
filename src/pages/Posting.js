@@ -2,16 +2,7 @@ import AddPost from "../components/AddPost"
 import { useState } from "react"
 
 const Posting = () => {
-  const [posts, setPosts] = useState([
-    {
-      id: 1,
-      start: "Atlanta, GA",
-      end: "Athens, GA",
-      image: null,
-      date: "March, 2023",
-      description: "Pretty fun, hasn't happened yet"
-    }
-  ])
+  const [posts, setPosts] = useState([])
 
   const addPost = (post) => {
     const id = Math.floor(Math.random() * 1000) + 1
