@@ -16,6 +16,8 @@ const SignUp = ({ onAdd }) => {
     } catch (error) {
       console.log(error.message);
     }
+
+
   }
   
   const [userName, setUserName] = useState("")
@@ -42,7 +44,9 @@ const SignUp = ({ onAdd }) => {
       alert("Passwords do not match")
       return
     }
-
+    
+    register()
+    
     onAdd({ userName, email, password })
 
     setUserName("")
@@ -70,7 +74,7 @@ const SignUp = ({ onAdd }) => {
         <input type="password" placeholder="Confirm password" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}/>
       </div>
 
-      <button onClick = {register}>Submit</button>
+      <input type = "submit" value = "submit"/>
     </form>
   )
 }
