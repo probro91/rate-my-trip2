@@ -2,12 +2,15 @@ import { signInWithEmailAndPassword } from 'firebase/auth'
 import React from 'react'
 import { useState } from 'react'
 import {auth} from '../firebase-config'
+import { useNavigate } from 'react-router-dom'
 import '../components/form.css'
 
 const SignIn = () => {
   
   const [email, setLoginEmail] = useState("")
   const [password, setLoginPassword] = useState("")
+
+  const navigate = useNavigate()
 
   const login = async() => {
     try {
@@ -34,7 +37,7 @@ const SignIn = () => {
     }
     
     login()
-    
+    navigate("/")
     setLoginEmail('')
     setLoginPassword('')
   }
