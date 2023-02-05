@@ -56,7 +56,7 @@ const AddPost = () => {
       
 
       <div className="txt_field">  
-        <input type="text" placeholder="When did you go on your trip?" value={date} onChange={(e) => setDate(e.target.value)}/>
+        <input type="text" placeholder="When did you go on your trip? (MM/DD/YYYY)" value={date} onChange={(e) => setDate(e.target.value)}/>
       </div>
 
       <div className="txt_field">  
